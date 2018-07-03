@@ -13,10 +13,29 @@ CSS (Cascading Style Sheets) 網頁樣式表，用來定義HTML元素的顯示�
 4.可以建立共同樣式指令，在不同的物件套用相同的樣式設定</br>
 ## <font color="blue">三、套用方式</font>
 1.標記加註式 (in-line)：如果只有一個 HTML 標記需要設定樣式，可在該標記內，加上屬性 style="CSS語法"，就可個別修訂樣式。
-
+```    
+實例說明：
+<p style="color:#11afed;margin-left:12px;">這是inline寫法.</p>
+```
 2.網頁內嵌式 (embedded)：在 HTML 文件的< head > < /head > 之間，以< style > < /style > 來定義共同樣式，使整個網頁使用同一樣式。
-
+```    
+實例說明：
+<head>
+<style type="test/css">
+p {
+    color:#11afed;
+    margin-left:12px;
+}
+</style>
+</head>
+```
 3.外部設定式 (external)：由於一個網站由許多網頁所組成，盡量統一樣式，避免看得眼花繚亂，失去瀏覽的重點。 而且如果每一網頁均個別做樣式設定，萬一將來做修改時，需要花費更多時間，因此可使每個網頁均連結到同一個 .css 的純文字檔，以設定整個網站的樣式。
+```    
+實例說明：
+<head>
+<link rel="stylesheet" type="text/css" href="external.css" />
+</head>
+```
 ## <font color="blue">四、了解CSS結構</font>
 ![CSS](/css/CSS.png)
 ### 選擇器（Selector）
