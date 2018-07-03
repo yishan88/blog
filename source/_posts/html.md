@@ -12,7 +12,7 @@ HTML包含一系列的元素( elements )讓你圍住、包裹或標記不同部�
 ## 了解HTML架構
 ### 1.元素
 ### HTML 元素指的是從開始標籤（start tag）到結束標籤（end tag）的所有代碼。
-![元素](/_posts/html/元素.jpg)
+![元素](/html/元素.jpg)
 
 1.起始標籤(opening tag)：包含了元素名字p，元素開始的地方<br>
 2.結束標籤(closing tag)：表示元素結束的地方，比起始標籤多了一條斜線<br>
