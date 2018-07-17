@@ -23,13 +23,13 @@ tags:
 ## <font color="blue">四、Kubernetes的架構</font>
 ![架構](/kubernetes/架構.png)
 ### k8s屬分布式系統，主要元件有：
-```
-1.Master(server端) -扮演管理叢集的角色，可以透過CLI、API或控制介面等等不同方式與Master溝通進而存取、控制或修改叢集狀態，EX：配置資源、擴充Pob數量。
-```
+
+### 1.Master(server端) -扮演管理叢集的角色，可以透過CLI、API或控制介面等等不同方式與Master溝通進而存取、控制或修改叢集狀態，EX：配置資源、擴充Pob數量。
+
 1.1 API Sever：管理者會將需要做的工作(EX：新增或刪除元件)傳送至API-server，API-server會驗證並處理管理者要求執行的工作，當工作執行完畢之後，叢集的最新狀態就會儲存至etcd。<br>
 1.2 Controller Manager：會透過API Server了解目前叢集的狀況，並嘗試把目前狀態調整為管理者想要的狀態<br>
 1.3 etcd：kubernetes中的每個組件(API服務器、調度程序、kubelet、控制器管理器等)都是無狀態的，所有狀態都存儲在etcd中，組件之間的通信通常透過etcd進行。Master會透過etcd了解目前叢集的運行狀況，etcd可以是Master的一部份或是獨立被設置在外部，當etcd被設置在外部時，Master會連到etcd取得或更新叢集狀態。<br>
-1.4 scheduler：排程作業，scheduler會知道目前Worker Node的狀況，當需要配置Pod時，scheduler會找出最合適的Node並配置Pod。
-```
+1.4 scheduler：排程作業，scheduler會知道目前Worker Node的狀況，當需要配置Pod時，scheduler會找出最合適的Node並配置Pod。<hr>
+
 ### 2.Node：簡單說是一台機器，可以是實體機或虛擬機(VM)，而多個運行單位Pod會被配置到Node中運行，而每個Pod中含有一到多個容器。
-```
+
