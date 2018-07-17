@@ -6,7 +6,6 @@ menu:
 
 rss: /atom.xml
 favicon: /favicon.png
-background_color: /black
 
 date_format: 'MMMM D, YYYY'
 
