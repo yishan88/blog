@@ -24,7 +24,7 @@ tags:
 ![架構](/kubernetes/架構.png)
 ### k8s屬分布式系統，主要元件有：
 
-### 1.Master(server端) -扮演管理叢集的角色，可以透過CLI、API或控制介面等等不同方式與Master溝通進而存取、控制或修改叢集狀態，EX：配置資源、擴充Pob數量。
+### 1.Master(server端) -扮演管理叢集的角色，可以透過CLI、API或控制介面等等不同方式與Master溝通進而存取、控制或修改叢集狀態，EX：配置資源、擴充Pob數量。<hr>
 
 1.1 API Sever：管理者會將需要做的工作(EX：新增或刪除元件)傳送至API-server，API-server會驗證並處理管理者要求執行的工作，當工作執行完畢之後，叢集的最新狀態就會儲存至etcd。<br>
 1.2 Controller Manager：會透過API Server了解目前叢集的狀況，並嘗試把目前狀態調整為管理者想要的狀態<br>
